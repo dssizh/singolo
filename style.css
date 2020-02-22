@@ -1,0 +1,26 @@
+.content_wrapper {
+    width: 1020px;
+    margin-left: auto;
+    margin-right: auto;
+}
+
+.header {
+    height: 90;
+    display: flex;
+    border: 2px solid red;
+}
+
+.navbar {
+    width: 454px;
+    height: 42px;
+    margin-top: 73px;
+    margin-left: auto;
+    z-index: 999;
+}
+
+.navbar ul {
+    display: flex;
+    justify-content: space-between;
+    background-image: linear-gradient(0deg, #f5c505 0%, #f5c505 100%);
+    background-color: red;
+}
