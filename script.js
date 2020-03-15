@@ -37,19 +37,13 @@ function hideItem(direction) {
     isEnabled = false;
     items[currentItem].classList.add(direction)
     items[currentItem].addEventListener('animationend', function() {
-        console.log('animation end')
         this.classList.remove('active', direction)
     })
 }
 
 function showItem(direction) {
-    console.log('show item')
     items[currentItem].classList.add('next', direction)
-    console.log('show item2')
-    console.log(items[currentItem])
-    // isEnabled = true;
     items[currentItem].addEventListener('animationend', function() {
-        console.log('show item3')
         this.classList.remove('next', direction)
         this.classList.add('active')
         isEnabled = true;
@@ -57,40 +51,43 @@ function showItem(direction) {
 }
 
 function changeCurrentItem(n) {
-    // items[currentItem].classList.remove('active')
     currentItem = (n + items.length) % items.length;
-    console.log(currentItem)
-    // items[currentItem].classList.add('active');
-
-    // let slider = document.querySelector('.slider');
-    // if (slider.classList.contains('slider_new_background')) {
-    //     slider.classList.remove('slider_new_background')
-    // } else {
-    //     slider.classList.add('slider_new_background')
-    // }
-
-    // let buttons = document.querySelectorAll('.button');
-    // buttons.forEach((button)=> {
-    //     if (button.classList.contains('button_new_background')) {
-    //         button.style.setProperty('background-color', "#f06c64");
-    //         button.classList.remove('button_new_background')
-    //     } else {
-    //         button.classList.add('button_new_background')
-    //         button.style.setProperty('background-color', "#648BF0");
-    //     }
-    // })
 }
 
 document.querySelector('.left_button').addEventListener('click', function() {
     if (isEnabled) {
         previousItem(currentItem)
     }
-    // changeCurrentItem(currentItem-1);
 })
 
 document.querySelector('.right_button').addEventListener('click', function() {
     if (isEnabled) {
         nextItem(currentItem)
     }
-    // changeCurrentItem(currentItem+1)
 })
+
+function setBlack(source) {
+    let name = source.target.offsetParent.getAttribute('black_screen_name')
+    console.log(name);
+    let blackScreen = document.querySelector(name)
+    if (blackScreen.classList.contains('none_black')) {
+        blackScreen.classList.remove('none_black')
+    } else {
+        blackScreen.classList.add('none_black')
+    }
+}
+
+let slider_images = document.querySelectorAll('.slider_image');
+slider_images.forEach(element => {
+    element.addEventListener('click', setBlack)
+});
+
+function removeBlack(source){
+    console.log(source);
+    source.target.classList.add('none_black')
+}
+
+document.querySelectorAll('.black_screen').forEach(function(element){
+    element.addEventListener('click', removeBlack)
+    }
+)

@@ -111,15 +111,11 @@
 }
 
 .item {
+    height: 606px;
     display: none;
     position: relative;
     animation: 0.5s ease-in-out;
 }
-
-.item.active {
-    display: block;
-}
-
 
 .active,
 .next {
@@ -165,7 +161,7 @@
     }
 }
 
-@keyframes rigth {
+@keyframes right {
     from {
         left: 100%;
     }
@@ -176,95 +172,93 @@
 
 .iphone_vert {
     margin-bottom: 50px;
+    width: 240px;
+    height: 483px;
+    margin-top: 54px;
+    margin-left: 95px;
 }
 
 .iphone_horiz {
-    right: 330px;
+    margin-left: 70px;
     position: relative;
     top: 85px;
+    width: 484px;
+    height: 240px;
 }
 
-/***********/
+.none_black {
+    display: none;
+}
 
 .slider2_wrap {
     position: relative;
 }
 
-.slider2__image_1 {
+.slider2_image_1 {
     position: absolute;
     top: 158px;
     left: 172px;
     z-index: 0;
     cursor: pointer;
+    margin-left: 80px;
 }
 
-.slider-wrap__black-vertical-one {
+.slider2_image_1_black {
     position: absolute;
     width: 123px;
     height: 218px;
     background-color: #000;
-    left: 180px;
-    top: 146px;
+    left: 260px;
+    top: 200px;
     z-index: 2;
     cursor: pointer;
 }
 
-/* .slider-wrap__screen-wrap-vertical-two {
-    position: relative;
-} */
-
-.slider2__image_2 {
+.slider2_image_2 {
     position: absolute;
     top: 49px;
     left: 303px;
     z-index: 1;
     cursor: pointer;
+    margin-left: 80px;
 }
 
-.slider-wrap__black-vertical-two {
+.slider2_image_2_black {
     position: absolute;
     width: 201px;
     height: 355px;
     background-color: #000;
-    right: 332px;
-    top: 63px;
+    left: 398px;
+    top: 118px;
     z-index: 2;
     cursor: pointer;
 }
 
-/* .slider-wrap__screen-wrap-vertical-three {
-    position: relative;
-} */
-
-.slider2__image_3 {
+.slider2_image_3 {
     position: absolute;
     top: 158px;
     left: 532px;
     z-index: 0;
     cursor: pointer;
+    margin-left: 80px;
 }
 
-.slider-wrap__black-vertical-three {
+.slider2_image_3_black {
     position: absolute;
     width: 123px;
     height: 218px;;
     background-color: #000;
-    right: 186px;
-    top: 146px;
+    left: 621px;
+    top: 200px;
     z-index: 2;
     cursor: pointer;
 }
-/***********/
-
-
-/* .action_button {
-    background-color:  #f06c64;
-} */
 
 .button {
     height: 27px;
     width: 16px;
-    background-color:  #f06c64;
+    /* background-color:  #f06c64; */
+    background: none;
     border: none;
     margin: 0px 42px 0px 42px;
 }
@@ -276,10 +270,16 @@
 
 .left_button {
     background-image: url('./assets/images/left_button.svg');
+    position: absolute;
+    left: 50px;
+    z-index: 100;
 }
 
 .right_button {
     background-image: url('./assets/images/right_button.svg');
+    position: absolute;
+    right: 50px;
+    z-index: 100;
 }
 
 .our_service {
