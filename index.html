@@ -14,7 +14,7 @@
     <h1 class="header_h1">Singolo</h1>
 
     <div class="content_wrapper">
-        <div class="header_wrapper">
+        <div class="header_wrapper" id="top">
             <header class="header">
                 <a href="#" class="logo">
                     <p>
@@ -25,27 +25,27 @@
                 <nav class="navbar">
                     <ul class="navbar_list">
                         <li class="li_home">
-                            <a href="#">
+                            <a href="#top" class="header_link">
                                 <span class="text">Home<span>
                             </a>
                         </li>
                         <li class="li_services">
-                            <a href="#">
+                            <a href="#our_service" class="header_link">
                                 <span class="text">Services</span>
                             </a>
                         </li>
                         <li class="li_portfolio">
-                            <a href="#">
+                            <a href="#portfolio" class="header_link">
                                 <span class="text">Portfolio</span>
                             </a>
                         </li>
                         <li class="li_about">
-                            <a href="#">
+                            <a href="#about" class="header_link">
                                 <span class="text">About</span>
                             </a>
                         </li>
                         <li class="li_contact">
-                            <a href="#">
+                            <a href="#contact" class="header_link">
                                 <span class="text">Contact</span>
                             </a>
                         </li>
@@ -57,21 +57,54 @@
 
     <div class="content_wrapper">
         <div class="slider">
-            <form action="">
+            <form action="" class="action_button">
                 <input class="left_button button" type="button">
             </form>
-            <main class="main">
-                <img src="./assets/images/iphone_vert.png" alt="" width="580" height="580" class="iphone_vert">
-                <img src="./assets/images/iphone_horiz.png" alt="" width="580" height="580" class="iphone_horiz">
-            </main>
-            <form action="">
+            <div class="item_container">
+                <div class="item active">
+                    <main class="main">
+                        <!-- <img src="./assets/images/iphone_vert.png" alt="" width="580" height="580" class="iphone_vert">
+                        <img src="./assets/images/iphone_horiz.png" alt="" width="580" height="580"
+                            class="iphone_horiz"> -->
+                            <img src="./assets/images/iphone_vert2.png" alt="" class="iphone_vert">
+                            <img src="./assets/images/iphone_horiz2.png" alt="" class="iphone_horiz">
+                    </main>
+                </div>
+                <div class="item slide2">
+                    <main class="main">
+                    <!-- <main class="main">
+                        <img src="./assets/images/iphone_vert.png" alt="" width="580" height="580" class="iphone_horiz">
+                        
+                    </main> -->
+                    <div class="slider2_wrap">
+                        <div class="slider2_image_1_black none_black black_screen"></div>
+                        <div class="slider2_image_1 slider_image" black_screen_name=".slider2_image_1_black">
+                            <img src="./assets/images/slide2_iphone_vert2.png">
+                        </div>
+                    </div>
+                    <div class="slider2_wrap">
+                        <div class="slider2_image_2_black none_black black_screen"></div>
+                        <div class="slider2_image_2 slider_image" black_screen_name=".slider2_image_2_black">
+                            <img src="./assets/images/slide2_iphone_vert1.png">
+                        </div>
+                    </div>
+                    <div class="slider2_wrap">
+                        <div class="slider2_image_3_black none_black black_screen"></div>
+                        <div class="slider2_image_3 slider_image" black_screen_name=".slider2_image_3_black">
+                            <img src="./assets/images/slide2_iphone_vert2.png">
+                        </div>
+                    </div>
+                    </main>
+                </div>
+            </div>
+            <form action="" class="action_button">
                 <input class="right_button button" type="button">
             </form>
         </div>
     </div>
 
     <div class="content_wrapper">
-        <div class="our_service">
+        <div class="our_service" id="our_service">
             <main class="our_service_main">
                 <div class="our_service_title_wrapper">
                     <p class="our_service_title">Our Services</p>
@@ -158,7 +191,7 @@
 
     <div class="content_wrapper">
 
-        <div class="portfolio">
+        <div class="portfolio" id="portfolio">
 
             <main class="portfolio_main">
 
@@ -257,7 +290,7 @@
     </div>
 
     <div class="content_wrapper">
-        <div class="about">
+        <div class="about" id="about">
             <main class="about_main">
                 <div class="about_title">
                     <p class="about_title_text">About Us</p>
@@ -460,7 +493,7 @@
     </div>
 
     <div class="content_wrapper">
-        <div class="contacts">
+        <div class="contacts" id="contact">
             <main class="contacts_main">
 
                 <div class="contacts_title">
@@ -545,5 +578,7 @@
     </div>
 
 </body>
+
+<script src="./script.js"></script>
 
 </html>
